@@ -28,12 +28,5 @@ Route::get('/team/{postId}/delete', [SalesteamController::class, 'deleteTeam'])-
 
 
 Route::group(['middleware' => 'auth'], function () {
-    //Route::post('/team/store', [PostController::class, 'store'])->name('posts.store');
-  //  Route::get('/team/all', [SalesteamController::class, 'getTeam'])->name('team.all');
-   // Route::get('/posts/{postId}/edit', [PostController::class, 'edit'])->name('posts.edit');
-    // Route::post('/posts/{postId}/update', [PostController::class, 'update'])->name('posts.update');
-    // Route::post('/posts/search', [PostController::class, 'search'])->name('posts.search');
-    // Route::get('/posts/{postId}/delete', [PostController::class, 'delete'])->name('posts.delete');
-
-    
+  
 });
