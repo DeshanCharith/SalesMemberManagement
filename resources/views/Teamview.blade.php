@@ -9,8 +9,7 @@
                     {{ session('status') }}
                 </div>
             @endif
-
-            
+           
             <a href="{{ route('home')}}" class="btn btn-sm btn-primary">Add New</a>
 
             <table class="table">
@@ -50,25 +49,21 @@
 
 
 
-
+ <!-- Bootstrap model use for view details -->
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+        <h5 class="modal-title" id="exampleModalToggleLabel">View Details</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
        
-
-
-
-
       <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">View member:</div>
+                <div class="card-header">View member</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -77,8 +72,7 @@
                         </div>
                     @endif
 
-                    <form method="post">
-                        @csrf
+                    <form > 
                         <div class="form-group">
                           <label>ID</label>
                           <input type="text" name="id" class="form-control" placeholder="Enter post title" required value="{{ $team->id }}" disabled>
@@ -104,7 +98,7 @@
                         </div>
                         <div class="form-group">
                           <label>Comment</label>
-                          <input type="text" name="comment" class="form-control" placeholder="Enter post title" required value="{{ $team->comment }}" disabled>
+                          <textarea class="form-control" name="comment" placeholder="Enter post description" rows="6"  placeholder="Enter " disabled>{{ $team->comment }}</textarea>    
                         </div>
                         </div>
                     </form>
@@ -114,15 +108,13 @@
     </div>
 </div>
 
-
-
       </div>
       <div class="modal-footer">
       </div>
     </div>
   </div>
 </div>
-
+ <!-- End of Bootstrap model use for view details -->
 
 
 @endsection
