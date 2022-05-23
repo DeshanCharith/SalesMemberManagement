@@ -17,9 +17,9 @@ class CreateSalesteamsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->text('telephone');
+            $table->integer('telephone');
             $table->string('joined_date');
-            $table->text('current_routes');
+            $table->string('current_routes');
             $table->string('comment');
             $table->timestamps();
         });
